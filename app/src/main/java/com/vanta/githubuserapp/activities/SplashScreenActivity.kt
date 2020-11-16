@@ -1,9 +1,10 @@
-package com.vanta.githubuserapp
+package com.vanta.githubuserapp.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.vanta.githubuserapp.R
 
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

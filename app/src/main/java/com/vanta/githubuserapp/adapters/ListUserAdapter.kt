@@ -1,5 +1,6 @@
-package com.vanta.githubuserapp
+package com.vanta.githubuserapp.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.vanta.githubuserapp.R
+import com.vanta.githubuserapp.models.User
 
 class ListUserAdapter(private val listUser: ArrayList<User>) :
     RecyclerView.Adapter<ListUserAdapter.ListViewHolder>() {
@@ -19,9 +22,8 @@ class ListUserAdapter(private val listUser: ArrayList<User>) :
     }
 
      class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var avatar: ImageView = itemView.findViewById(R.id.avatar)
-        var name: TextView = itemView.findViewById(R.id.name)
-        var username: TextView = itemView.findViewById(R.id.username)
+        var avatar: ImageView = itemView.findViewById(R.id.iv_avatar)
+        var username: TextView = itemView.findViewById(R.id.tv_username)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
@@ -43,7 +45,6 @@ class ListUserAdapter(private val listUser: ArrayList<User>) :
             .apply(RequestOptions().override(55, 55))
             .into(holder.avatar)
 
-        holder.name.text = user.name
         holder.username.text = user.username
         holder.itemView.setOnClickListener {
             onItemClickCallback.onItemClicked(listUser[holder.adapterPosition])}
