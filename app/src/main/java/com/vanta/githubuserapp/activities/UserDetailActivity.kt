@@ -53,6 +53,10 @@ class UserDetailActivity : AppCompatActivity() {
     }
 
     fun getGithubUserDetail(username: String?) {
+
+
+        detailUserProgressBar.visibility = View.VISIBLE
+
         if (username != null) {
             client.get(
                 Constants.GITHUB_DETAIL_USER_URL.replace("{username}", username),
@@ -63,6 +67,7 @@ class UserDetailActivity : AppCompatActivity() {
                         responseBody: ByteArray?
                     ) {
 
+                        detailUserProgressBar.visibility = View.INVISIBLE
                         var result = responseBody?.let { JSONObject(String(it)) }
 
                         if (result != null) {
@@ -89,6 +94,7 @@ class UserDetailActivity : AppCompatActivity() {
                         responseBody: ByteArray?,
                         error: Throwable?
                     ) {
+                        detailUserProgressBar.visibility = View.INVISIBLE
                         Toast.makeText(
                             this@UserDetailActivity,
                             "Get User Detail Failed",
