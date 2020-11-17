@@ -2,10 +2,7 @@ package com.vanta.githubuserapp.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.loopj.android.http.AsyncHttpClient
@@ -15,7 +12,6 @@ import com.vanta.githubuserapp.R
 import com.vanta.githubuserapp.adapters.ViewPagerAdapter
 import com.vanta.githubuserapp.models.User
 import cz.msebera.android.httpclient.Header
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_user_detail.*
 import org.json.JSONObject
 
@@ -27,7 +23,7 @@ class UserDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_detail)
 
-        supportActionBar?.title = "User Detail"
+        supportActionBar?.title = getString(R.string.app_user_detail_name)
 
         client.apply {
             addHeader("Authorization", "token ${Constants.GITHUB_TOKEN}")
@@ -53,7 +49,6 @@ class UserDetailActivity : AppCompatActivity() {
     }
 
     fun getGithubUserDetail(username: String?) {
-
 
         detailUserProgressBar.visibility = View.VISIBLE
 

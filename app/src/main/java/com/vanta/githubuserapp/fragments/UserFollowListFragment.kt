@@ -1,9 +1,7 @@
 package com.vanta.githubuserapp.fragments
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -21,7 +19,6 @@ import com.vanta.githubuserapp.models.User
 import cz.msebera.android.httpclient.Header
 import kotlinx.android.synthetic.main.fragment_user_follow_list.*
 import org.json.JSONArray
-import java.io.OutputStreamWriter
 import java.lang.Exception
 
 class UserFollowListFragment : Fragment() {
