@@ -50,7 +50,7 @@ class UserDetailActivity : AppCompatActivity() {
 
     fun getGithubUserDetail(username: String?) {
 
-        detailUserProgressBar.visibility = View.VISIBLE
+//        detailUserProgressBar.visibility = View.VISIBLE
 
         if (username != null) {
             client.get(
@@ -62,7 +62,8 @@ class UserDetailActivity : AppCompatActivity() {
                         responseBody: ByteArray?
                     ) {
 
-                        detailUserProgressBar.visibility = View.INVISIBLE
+//                        detailUserProgressBar.visibility = View.INVISIBLE
+                        rlayout.visibility = View.GONE
                         var result = responseBody?.let { JSONObject(String(it)) }
 
                         if (result != null) {

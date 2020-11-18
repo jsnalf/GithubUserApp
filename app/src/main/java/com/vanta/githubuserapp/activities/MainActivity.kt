@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(searchValue: String?): Boolean {
+                rvUser.visibility = View.INVISIBLE
                 listUserProgressBar.visibility = View.VISIBLE
                 searchValue?.let { mainViewModel.setUser(it) }
                 return true
@@ -65,6 +66,7 @@ class MainActivity : AppCompatActivity() {
             if (userItems != null) {
                 listUserAdapter.setData(userItems)
                 listUserProgressBar.visibility = View.INVISIBLE
+                rvUser.visibility = View.VISIBLE
             }
         })
 
