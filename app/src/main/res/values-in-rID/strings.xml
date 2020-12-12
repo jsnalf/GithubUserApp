@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aplikasi Pengguna Github</string>
+    <string name="app_user_detail_name">Detil Pengguna</string>
+    <string name="search_query_hint">Cari Pengguna…</string>
+    <string name="location_lbl">Lokasi :</string>
+    <string name="company_lbl">Perusahaan :</string>
+    <string name="repositories_lbl">Repositori</string>
+    <string name="following_lbl">Mengikuti</string>
+    <string name="followers_lbl">Pengikut</string>
+    <string name="change_language_settings">Ubah Pengaturan Bahasa</string>
+    <string name="favorite_users">Pengguna Favorit</string>
+    <string name="settings">Pengaturan</string>
+</resources>
