@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Github User App</string>
+<<<<<<< Updated upstream
     <string-array name="username">
         <item>JakeWharton</item>
         <item>amitshekhariitbhu</item>
@@ -103,4 +104,16 @@
         <item>@drawable/user9</item>
         <item>@drawable/user10</item>
     </string-array>
+=======
+    <string name="app_user_detail_name">User Detail</string>
+    <string name="search_query_hint">Search User…</string>
+    <string name="location_lbl">Location :</string>
+    <string name="company_lbl">Company :</string>
+    <string name="repositories_lbl">Repositories</string>
+    <string name="following_lbl">Following</string>
+    <string name="followers_lbl">Followers</string>
+    <string name="change_language_settings">Change Language Settings</string>
+    <string name="favorite_users">Favorite Users</string>
+    <string name="settings">Settings</string>
+>>>>>>> Stashed changes
 </resources>

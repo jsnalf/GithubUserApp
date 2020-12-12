@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.vanta.githubuserapp">
 
+<<<<<<< Updated upstream
+=======
+    <uses-permission android:name="android.permission.INTERNET" />
+
+>>>>>>> Stashed changes
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,16 +14,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< Updated upstream
         <activity android:name=".SplashScreenActivity"
+=======
+        <activity android:name=".activities.SettingsActivity"></activity>
+        <activity android:name=".activities.FavouriteUserActivity" />
+        <activity
+            android:name=".activities.SplashScreenActivity"
+>>>>>>> Stashed changes
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< Updated upstream
         <activity android:name=".UserDetailActivity" />
         <activity android:name=".MainActivity">
         </activity>
+=======
+        <activity android:name=".activities.UserDetailActivity" />
+        <activity android:name=".activities.MainActivity" />
+>>>>>>> Stashed changes
     </application>
 
 </manifest>
